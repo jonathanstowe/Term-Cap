@@ -25,3 +25,13 @@ Revision history for Perl extension Term::Cap.
        - Fixed Makefile.PL with INSTALLDIRS - from Michael Schwern
        - Sanity check on infocmp output - from Norton Allen 
          <allen@huarp.harvard.edu>
+
+1.08   Sat Sep 28 11:33:15 BST 2002
+       - Late loading of 'Carp' as per Michael Schwern
+
+1.09  Tue Apr 20 12:06:51 BST 2004
+       -  Merged in changes from and to Core
+       - Core (Fri Aug 30 14:15:55 CEST 2002):
+         Cope with comments lines from 'infocmp' from Brendan O'Dea
+       - Allow for EBCDIC in Tgoto magic test.
+

@@ -17,7 +17,7 @@ use strict;
 use vars qw($VERSION $VMS_TERMCAP);
 use vars qw($termpat $state $first $entry);
 
-$VERSION = '1.08';
+$VERSION = '1.09';
 
 # Version undef: Thu Dec 14 20:02:42 CST 1995 by sanders@bsdi.com
 # Version 1.00:  Thu Nov 30 23:34:29 EST 2000 by schwern@pobox.com
@@ -42,7 +42,11 @@ $VERSION = '1.08';
 #       Repaired INSTALLDIRS thanks to Michael Schwern
 # Version 1.08:  Sat Sep 28 11:33:15 BST 2002
 #       Late loading of 'Carp' as per Michael Schwern
-#
+# Version 1.09:  Tue Apr 20 12:06:51 BST 2004
+#       Merged in changes from and to Core
+#       Core (Fri Aug 30 14:15:55 CEST 2002):
+#       Cope with comments lines from 'infocmp' from Brendan O'Dea
+#       Allow for EBCDIC in Tgoto magic test.
 
 # TODO:
 # support Berkeley DB termcaps
@@ -234,7 +238,7 @@ sub Tgetent { ## public -- static method
               eval
               {
                 my $tmp = `infocmp -C 2>/dev/null`;
-
+                $tmp =~ s/^#.*\n//gm; # remove comments
                 if (( $tmp !~ m%^/%s ) && ( $tmp =~ /(^|\|)${termpat}[:|]/s)) {
                    $entry = $tmp;
                 }
