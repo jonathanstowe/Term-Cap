@@ -1,4 +1,4 @@
-Term::Cap version 1.07
+Term::Cap version 1.10
 ======================
 
 Interface to the terminal capability database.
@@ -28,7 +28,7 @@ Suspected bugs in this module should be reported both to the maintainer
 
 COPYRIGHT AND LICENCE
 
-Copyright 1995-2001 (c) perl5 porters.
+Copyright 1995-2007 (c) perl5 porters.
 
 This software is free software and can be modified and distributed under
 the same terms as Perl itself.

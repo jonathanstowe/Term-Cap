@@ -49,10 +49,13 @@ $VERSION = '1.10';
 #       Core (Fri Aug 30 14:15:55 CEST 2002):
 #       Cope with comments lines from 'infocmp' from Brendan O'Dea
 #       Allow for EBCDIC in Tgoto magic test.
+# Version 1.10: Thu Oct 18 16:52:20 BST 2007
+#       Don't use try to use $ENV{HOME} if it doesn't exist
+#       Give Win32 'dumb' if TERM isn't set
+#       Provide fallback 'dumb' termcap entry as last resort
 
 # TODO:
 # support Berkeley DB termcaps
-# should probably be a .xs module
 # force $FH into callers package?
 # keep $FH in object at Tgetent time?
 
