@@ -19,7 +19,7 @@ use strict;
 use vars qw($VERSION $VMS_TERMCAP);
 use vars qw($termpat $state $first $entry);
 
-$VERSION = '1.09';
+$VERSION = '1.10';
 
 # Version undef: Thu Dec 14 20:02:42 CST 1995 by sanders@bsdi.com
 # Version 1.00:  Thu Nov 30 23:34:29 EST 2000 by schwern@pobox.com
@@ -228,7 +228,25 @@ sub Tgetent
         $self->{PADDING} = 10000 / $self->{OSPEED};
     }
 
-    $self->{TERM} = ( $self->{TERM} || $ENV{TERM} || croak "TERM not set" );
+    unless ( $self->{TERM} )
+    {
+       if ( $ENV{TERM} )
+       {
+         $self->{TERM} =  $ENV{TERM} ;
+       }
+       else
+       {
+          if ( $^O eq 'Win32' )
+          {
+             $self->{TERM} =  'dumb';
+          }
+          else
+          {
+             croak "TERM not set";
+          }
+       }
+    }
+
     $term = $self->{TERM};    # $term is the term type we are looking for
 
     # $tmp_term is always the next term (possibly :tc=...:) we are looking for
@@ -271,6 +289,14 @@ sub Tgetent
                         $entry = $tmp;
                     }
                 };
+            }
+            else
+            {
+               # this is getting desperate now
+               if ( $self->{TERM} eq 'dumb' )
+               {
+                  $entry = 'dumb|80-column dumb tty::am::co#80::bl=^G:cr=^M:do=^J:sf=^J:';
+               }
             }
         }
     }

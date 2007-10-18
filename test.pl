@@ -24,11 +24,11 @@ my $files = join '',
 	( $ENV{HOME} . '/.termcap', # we assume pretty UNIXy system anyway
 	  '/etc/termcap', 
 	  '/usr/share/misc/termcap' );
-unless( $files || $^O eq 'VMS') {
+unless( $files || $^O eq 'VMS' ) {
     plan skip_all => 'no termcap available to test';
 }
 else {
-    plan tests => 44;
+    plan tests => 45;
 }
 
 use_ok( 'Term::Cap' );
@@ -156,6 +156,17 @@ SKIP: {
 	# and it should have set these two fields
 	is( $t->{_pc}, "\0", 'should set _pc field correctly' );
 	is( $t->{_bc}, "\b", 'should set _bc field correctly' );
+}
+
+# Windows hack
+{
+   local *^O;
+   local *ENV;
+   delete $ENV{TERM};
+   $^O = 'Win32';
+
+   my $foo = Term::Cap->Tgetent();
+   is($foo->{TERM} ,'dumb','Windows gets "dumb" by default');
 }
 
 # Tgoto has comments on the expected formats
