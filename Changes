@@ -39,3 +39,7 @@ Revision history for Perl extension Term::Cap.
        - Don't use try to use $ENV{HOME} if it doesn't exist
        - Give Win32 'dumb' if TERM isn't set
        - Provide fallback 'dumb' termcap entry as last resort
+
+1.11  Thu Oct 25 09:33:07 BST 2007
+      - EBDIC fixes from Chun Bing Ge <gecb@cn.ibm.com>
+
