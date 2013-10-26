@@ -24,7 +24,8 @@ my $files = join '',
 	( $ENV{HOME} . '/.termcap', # we assume pretty UNIXy system anyway
 	  '/etc/termcap', 
 	  '/usr/share/misc/termcap' );
-unless( $files || $^O eq 'VMS' ) {
+my $terminfo = `infocmp -C 2>/dev/null`;
+unless( $files || $terminfo || $^O eq 'VMS' ) {
     plan skip_all => 'no termcap available to test';
 }
 else {
