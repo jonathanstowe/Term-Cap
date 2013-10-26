@@ -53,3 +53,7 @@ Revision history for Perl extension Term::Cap.
 1.14 Sat Oct 26 19:20:03 BST 2013
       - Update versions everywhere
       - Change email address and add the github location
+
+1.15 Sat Oct 26 21:28:29 BST 2013
+      - meta data patch from David Steinbrunner
+      - Change email in metadata

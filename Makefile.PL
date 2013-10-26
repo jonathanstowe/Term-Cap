@@ -5,6 +5,7 @@ WriteMakefile(
     'VERSION_FROM'	=> 'Cap.pm',
     'INSTALLDIRS'       => 'perl',
     'PREREQ_PM'		=> {Test::More => 0.33 },
+    'LICENSE'      => 'perl',
     META_MERGE => {
         'meta-spec' => { version => 2 },
         resources => {
@@ -17,5 +18,5 @@ WriteMakefile(
     },
     ($] >= 5.005 ?   
       (ABSTRACT_FROM => 'Cap.pm',
-       AUTHOR     => 'Jonathan Stowe <gellyfish@gellyfish.com>') : ()),
+       AUTHOR     => 'Jonathan Stowe <jns@gellyfish.co.uk>') : ()),
 );
