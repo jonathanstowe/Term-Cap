@@ -243,7 +243,7 @@ sub Tgetent
        }
        else
        {
-          if ( $^O eq 'Win32' )
+          if ( $^O eq 'MSWin32' )
           {
              $self->{TERM} =  'dumb';
           }
