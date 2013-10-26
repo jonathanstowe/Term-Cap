@@ -164,7 +164,7 @@ SKIP:
    local *^O;
    local *ENV;
    delete $ENV{TERM};
-   $^O = 'Win32';
+   $^O = 'MSWin32';
 
    my $foo = Term::Cap->Tgetent();
    is($foo->{TERM} ,'dumb','Windows gets "dumb" by default');
