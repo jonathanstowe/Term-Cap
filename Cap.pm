@@ -19,7 +19,7 @@ use strict;
 use vars qw($VERSION $VMS_TERMCAP);
 use vars qw($termpat $state $first $entry);
 
-$VERSION = '1.13';
+$VERSION = '1.14';
 
 # Version undef: Thu Dec 14 20:02:42 CST 1995 by sanders@bsdi.com
 # Version 1.00:  Thu Nov 30 23:34:29 EST 2000 by schwern@pobox.com
@@ -59,7 +59,8 @@ $VERSION = '1.13';
 #       QNX test fix from Matt Kraai <kraai@ftbfs.org>
 # Version 1.13: Thu Dec 22 22:21:09 GMT 2011
 #       POD error fix from Domin Hargreaves <dom@earth.li>
-#
+# Version 1.14 Sat Oct 26 19:16:38 BST 2013
+#       Applied all patches from RT and updated contact details
 # TODO:
 # support Berkeley DB termcaps
 # force $FH into callers package?
@@ -771,7 +772,10 @@ Please see the README file in distribution.
 =head1 AUTHOR
 
 This module is part of the core Perl distribution and is also maintained
-for CPAN by Jonathan Stowe <jns@gellyfish.com>.
+for CPAN by Jonathan Stowe <jns@gellyfish.co.uk>.
+
+The code is hosted on Github: https://github.com/jonathanstowe/Term-Cap
+please feel free to fork, submit patches etc, etc there.
 
 =head1 SEE ALSO
 
