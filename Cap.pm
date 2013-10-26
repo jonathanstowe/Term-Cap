@@ -296,6 +296,7 @@ sub Tgetent
                         $entry = $tmp;
                     }
                 };
+                warn "Can't run infocmp to get a termcap entry: $@" if $@;
             }
             else
             {
