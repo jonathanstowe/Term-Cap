@@ -679,9 +679,9 @@ sub Tgoto
         elsif ( $code eq '>' )
         {
             ( $code, $tmp, $string ) = unpack( "CCa99", $string );
-            if ( $tmp[$[] > $code )
+            if ( $tmp[0] > $code )
             {
-                $tmp[$[] += $tmp;
+                $tmp[0] += $tmp;
             }
         }
         elsif ( $code eq '2' )
