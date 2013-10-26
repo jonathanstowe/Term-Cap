@@ -476,7 +476,7 @@ It takes three arguments:
 
 The literal string to be output.  If it starts with a number and an optional
 '*' then the padding will be increased by an amount relative to this number,
-if the '*' is present then this amount will me multiplied by $cnt.  This part
+if the '*' is present then this amount will be multiplied by $cnt.  This part
 of $string is removed before output/
 
 =item B<$cnt>
