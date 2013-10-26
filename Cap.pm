@@ -183,7 +183,7 @@ It takes a hash reference as an argument with two optional keys:
 
 The terminal output bit rate (often mistakenly called the baud rate)
 for this terminal - if not set a warning will be generated
-and it will be defaulted to 9600.  I<OSPEED> can be be specified as
+and it will be defaulted to 9600.  I<OSPEED> can be specified as
 either a POSIX termios/SYSV termio speeds (where 9600 equals 9600) or
 an old DSD-style speed ( where 13 equals 9600).
 
