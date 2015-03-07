@@ -1,5 +1,5 @@
-Term::Cap version 1.14
-======================
+Term::Cap
+=========
 
 Interface to the terminal capability database.
 
@@ -34,7 +34,7 @@ Please feel free to fork it and submit pull requests.
 
 COPYRIGHT AND LICENCE
 
-Copyright 1995-2013 (c) perl5 porters.
+Copyright 1995-2015 (c) perl5 porters.
 
 This software is free software and can be modified and distributed under
 the same terms as Perl itself.
