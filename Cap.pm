@@ -727,7 +727,13 @@ sub Trequire
 
 =head1 COPYRIGHT AND LICENSE
 
-Please see the README file in distribution.
+Copyright 1995-2015 (c) perl5 porters.
+
+This software is free software and can be modified and distributed under
+the same terms as Perl itself.
+
+Please see the file README in the Perl source distribution for details of
+the Perl license.
 
 =head1 AUTHOR
 

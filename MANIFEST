@@ -1,6 +1,7 @@
 Cap.pm
 Changes
-Makefile.PL
+LICENSE
 MANIFEST
+Makefile.PL
 README
 test.pl
