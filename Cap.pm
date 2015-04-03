@@ -236,7 +236,7 @@ sub Tgetent
 
     my @termcap_path = termcap_path();
 
-    if ( !@termcap_path || !$entry )
+    if ( !@termcap_path && !$entry )
     {
 
         # last resort--fake up a termcap from terminfo
