@@ -19,7 +19,7 @@ use strict;
 use vars qw($VERSION $VMS_TERMCAP);
 use vars qw($termpat $state $first $entry);
 
-$VERSION = '1.16';
+$VERSION = '1.17';
 
 # TODO:
 # support Berkeley DB termcaps

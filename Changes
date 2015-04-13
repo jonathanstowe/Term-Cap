@@ -68,3 +68,6 @@ undef: Thu Dec 14 20:02:42 CST 1995 by sanders@bsdi.com
 1.16: Sat  5 Apr 10:19:35 BST 2014
 		- Make last resort actually work from drm00
       - Removed change log from Cap.pm
+
+1.17: Mon 13 Apr 09:18:09 BST 2015
+		- Fix regression caused by last resort change
