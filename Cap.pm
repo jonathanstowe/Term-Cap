@@ -362,25 +362,25 @@ sub Tgetent
     $entry =~ s/^[^:]*://;
     foreach $field ( split( /:[\s:\\]*/, $entry ) )
     {
-        if ( defined $field && $field =~ /^(\w\w)$/ )
+        if ( defined $field && $field =~ /^(\w{2,})$/ )
         {
             $self->{ '_' . $field } = 1 unless defined $self->{ '_' . $1 };
 
             # print STDERR "DEBUG: flag $1\n";
         }
-        elsif ( defined $field && $field =~ /^(\w\w)\@/ )
+        elsif ( defined $field && $field =~ /^(\w{2,})\@/ )
         {
             $self->{ '_' . $1 } = "";
 
             # print STDERR "DEBUG: unset $1\n";
         }
-        elsif ( defined $field && $field =~ /^(\w\w)#(.*)/ )
+        elsif ( defined $field && $field =~ /^(\w{2,})#(.*)/ )
         {
             $self->{ '_' . $1 } = $2 unless defined $self->{ '_' . $1 };
 
             # print STDERR "DEBUG: numeric $1 = $2\n";
         }
-        elsif ( defined $field && $field =~ /^(\w\w)=(.*)/ )
+        elsif ( defined $field && $field =~ /^(\w{2,})=(.*)/ )
         {
 
             # print STDERR "DEBUG: string $1 = $2\n";
