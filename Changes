@@ -71,3 +71,4 @@ undef: Thu Dec 14 20:02:42 CST 1995 by sanders@bsdi.com
 
 1.17-RC1: Wed  1 Jul 10:30:15 BST 2015
 		- Fix regression caused by last resort change
+		- Add support for capabilities of more than 2 characters
