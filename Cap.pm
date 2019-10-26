@@ -698,6 +698,9 @@ sub Trequire
 
 =head1 EXAMPLES
 
+    use strict;
+    use warnings;
+    
     use Term::Cap;
 
     # Get terminal output speed
