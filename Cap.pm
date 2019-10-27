@@ -699,7 +699,7 @@ sub Trequire
 =head1 EXAMPLES
 
     use Term::Cap;
-    
+
     # Get terminal output speed
     require POSIX;
     my $termios = POSIX::Termios->new;
