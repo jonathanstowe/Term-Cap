@@ -698,11 +698,10 @@ sub Trequire
 
 =head1 EXAMPLES
 
-    use strict;
-    use warnings;
-    
     use Term::Cap;
-
+    
+    # Initialize a terminal
+    $terminal->my $terminal;
     # Get terminal output speed
     require POSIX;
     my $termios = POSIX::Termios->new;
