@@ -712,7 +712,7 @@ sub Trequire
     #     ($ispeed,$ospeed) = unpack('cc',$sgtty);
 
     # allocate and initialize a terminal structure
-    $terminal = Term::Cap->Tgetent({ TERM => undef, OSPEED => $ospeed });
+    my $terminal = Term::Cap->Tgetent({ TERM => undef, OSPEED => $ospeed });
 
     # require certain capabilities to be available
     $terminal->Trequire(qw/ce ku kd/);
