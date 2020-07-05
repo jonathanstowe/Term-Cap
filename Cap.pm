@@ -91,7 +91,7 @@ sub termcap_path
     {
 
         # Add the users $TERMPATH
-        push( @termcap_path, split( /(:|\s+)/, $ENV{TERMPATH} ) );
+        push( @termcap_path, split( /:|\s+/, $ENV{TERMPATH} ) );
     }
     else
     {
