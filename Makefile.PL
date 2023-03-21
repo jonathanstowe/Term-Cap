@@ -3,7 +3,7 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     'NAME'		=> 'Term::Cap',
     'VERSION_FROM'	=> 'Cap.pm',
-    'INSTALLDIRS'       => 'perl',
+    'INSTALLDIRS'       => ($] < 5.012) ? "perl" : "site",
     'PREREQ_PM'		=> {Test::More => 0.33 },
     'LICENSE'      => 'perl',
     META_MERGE => {
